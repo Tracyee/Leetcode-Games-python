@@ -26,3 +26,7 @@ class Solution:
                 return i % 2 == 0
             elif i == bit_len - 2:
                 return not (i % 2 == 0)
+
+'''
+This is also an implementation of Greedy Algorithm
+'''
