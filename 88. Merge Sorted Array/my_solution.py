@@ -3,11 +3,11 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        num1[m:m+n] = num2[0:n]
+        nums1[m:m+n] = nums2[0:n]
         # if num1[m-1] > num1[m]:
         #     num1[m-1], num1[m] = num1[m], num1[m-1]
         #     if num1[m] > num1[m+1]:
         #         num1[m+1], num1[m] = num1[m], num1[m+1]
         #         if num1[m-2] > num1[m-1]:
         #             num1[m-1], num1[m-2] = num1[m-2], num1[m-1]
-        num1.sort()
+        nums1.sort()
