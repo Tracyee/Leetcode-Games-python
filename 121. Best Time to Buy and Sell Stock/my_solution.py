@@ -7,17 +7,27 @@ class Solution:
         output:
         - the maximum profit
         '''
-        if not prices:
+        if not prices: # case when prices = []
             return 0
         pnt1 = 0
-        pnt2 = 1
-        while pnt2 < len(prices):
+        for pnt2 in range(1, len(prices)):
             if prices[pnt1] > prices[pnt2]:
                 prices[pnt1] = 0 # record the maximum profit
                 pnt1 = pnt2
-                pnt2 += 1
             else:
                 prices[pnt2] = prices[pnt2] - prices[pnt1] # record the maximum profit
-                pnt2 += 1
+        # while pnt2 < len(prices):
+        #     if prices[pnt1] > prices[pnt2]:
+        #         prices[pnt1] = 0 # record the maximum profit
+        #         pnt1 = pnt2
+        #         pnt2 += 1
+        #     else:
+        #         prices[pnt2] = prices[pnt2] - prices[pnt1] # record the maximum profit
+        #         pnt2 += 1
         prices[pnt1] = 0
         return max(prices)
+'''
+One pass two pointers approach
+O(n) time complexity
+O(1) space complexity
+'''
